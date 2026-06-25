@@ -144,7 +144,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 8rem 4rem 5rem;
+
       gap: 4rem;
     }
 
@@ -295,7 +295,7 @@
     .wave-divider svg { display: block; width: 100%; }
 
     /* SECTION SHARED */
-    section { padding: 6rem 4rem; }
+    section { padding: 4rem 4rem; }
     section.alt { background: var(--fog); }
 
     .section-eyebrow {
