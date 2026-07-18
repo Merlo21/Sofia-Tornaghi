@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "/"
+public_folder: "/"
+
+locale: "it"
+
+collections:
+  - name: "contenuti"
+    label: "Contenuti del sito"
+    files:
+      - name: "testi"
+        label: "Testi principali"
+        file: "content/site.json"
+        fields:
+          - label: "Sottotitolo home"
+            name: "hero_sub"
+            widget: "text"
+            hint: "La frase sotto il nome, in cima al sito."
+          - label: "Bio — primo paragrafo"
+            name: "bio_p1"
+            widget: "text"
+            hint: "Primo paragrafo della sezione Chi sono."
+          - label: "Bio — secondo paragrafo"
+            name: "bio_p2"
+            widget: "text"
+            hint: "Secondo paragrafo della sezione Chi sono."
+          - label: "Indirizzo studio"
+            name: "indirizzo"
+            widget: "string"
+          - label: "Telefono"
+            name: "telefono"
+            widget: "string"
+          - label: "Numero recensioni"
+            name: "recensioni_num"
+            widget: "string"
+            hint: "Es. 16+"
