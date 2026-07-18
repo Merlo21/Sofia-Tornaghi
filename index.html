@@ -44,7 +44,7 @@
       <h1 class="hero-headline">
         Dott.ssa Sofia Tornaghi
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub" data-content="hero_sub">
         Specializzata nel supporto clinico per l'adolescenza e la giovane adultità. Esperta nel trattamento dei Disturbi della Nutrizione e dell'Alimentazione.
       </p>
       <div class="hero-actions">
@@ -62,7 +62,7 @@
         <p class="hero-card-meta">Sofia Tornaghi, psicologa</p>
         <div class="hero-stats">
           <div>
-            <div class="stat-num">16+</div>
+            <div class="stat-num" data-content="recensioni_num">16+</div>
             <div class="stat-label">Recensioni verificate</div>
           </div>
           <div>
@@ -97,12 +97,8 @@
         <h2 class="section-title">Una professionista<br>al tuo fianco</h2>
 
         <div class="bio-block">
-          <p>
-            Specializzata nel supporto clinico per l'adolescenza e la giovane adultità, accompagno i pazienti nel delicato percorso di costruzione dell'identità e nel superamento dei blocchi evolutivi.
-          </p>
-          <p>
-            Offro uno spazio di ascolto professionale e protetto, volto a trasformare la crisi in un'opportunità di rilancio evolutivo.
-          </p>
+          <p data-content="bio_p1">Specializzata nel supporto clinico per l'adolescenza e la giovane adultità, accompagno i pazienti nel delicato percorso di costruzione dell'identità e nel superamento dei blocchi evolutivi.</p>
+          <p data-content="bio_p2">Offro uno spazio di ascolto professionale e protetto, volto a trasformare la crisi in un'opportunità di rilancio evolutivo.</p>
         </div>
 
         <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: var(--fog); border-radius: 3px; border-left: 2px solid var(--sage);">
@@ -324,7 +320,7 @@
             </svg>
             <div>
               <div class="contact-label">Studio</div>
-              <div class="contact-value">Viale Gran Sasso 10, Milano 20131</div>
+              <div class="contact-value" data-content="indirizzo">Viale Gran Sasso 10, Milano 20131</div>
             </div>
           </div>
 
@@ -334,7 +330,7 @@
             </svg>
             <div>
               <div class="contact-label">Telefono</div>
-              <div class="contact-value">02 9994 1033</div>
+              <div class="contact-value" data-content="telefono">02 9994 1033</div>
             </div>
           </div>
 
@@ -410,5 +406,6 @@
   </footer>
 
     <script src="script.js"></script>
+  <script src="content-loader.js"></script>
 </body>
 </html>
