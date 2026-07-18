@@ -37,3 +37,12 @@ collections:
             name: "recensioni_num"
             widget: "string"
             hint: "Es. 16+"
+
+      - name: "foto"
+        label: "Foto profilo"
+        file: "content/foto.json"
+        fields:
+          - label: "Foto profilo"
+            name: "immagine"
+            widget: "image"
+            hint: "Carica una foto quadrata (verrà mostrata in cima al sito). Meglio se leggera e di forma quadrata."
