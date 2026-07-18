@@ -1,13 +1,14 @@
-// Carica i testi dal file dei contenuti e li inserisce nella pagina.
-// Se il file non si carica, la pagina resta con i testi già presenti (fallback sicuro).
+// Carica i contenuti dai file JSON e li inserisce nella pagina.
+// Se un file non si carica, la pagina resta con i contenuti già presenti (fallback sicuro).
 (function () {
+
+  // --- TESTI ---
   fetch('content/site.json')
     .then(function (r) {
       if (!r.ok) throw new Error('content non disponibile');
       return r.json();
     })
     .then(function (data) {
-      // Per ogni elemento con data-content="chiave", sostituisci il testo
       document.querySelectorAll('[data-content]').forEach(function (el) {
         var key = el.getAttribute('data-content');
         if (data[key] !== undefined && data[key] !== '') {
@@ -16,6 +17,24 @@
       });
     })
     .catch(function () {
-      // Silenzioso: se fallisce, restano i testi statici della pagina
+      // Silenzioso: restano i testi statici della pagina
     });
+
+  // --- FOTO ---
+  fetch('content/foto.json')
+    .then(function (r) {
+      if (!r.ok) throw new Error('foto non disponibile');
+      return r.json();
+    })
+    .then(function (data) {
+      if (data.immagine) {
+        document.querySelectorAll('[data-content-img]').forEach(function (el) {
+          el.setAttribute('src', data.immagine);
+        });
+      }
+    })
+    .catch(function () {
+      // Silenzioso: resta la foto statica della pagina
+    });
+
 })();
